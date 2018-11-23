@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "manifest_version": 2,
+  "name": "YouTube Better",
+  "icons": {"128": "youtube_logo.png"},
+  "browser_action": {
+    "default_icon": "youtube_logo.png",
+    "default_popup": "popup.html",
+    "default_title": "YouTubeBetter"
+  },
+  "content_security_policy": "script-src 'self' https://unpkg.com/axios/dist/axios.min.js; object-src 'self'"
+}
