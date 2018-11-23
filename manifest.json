@@ -3,6 +3,14 @@
   "manifest_version": 2,
   "name": "YouTube Better",
   "icons": {"128": "youtube_logo.png"},
+  "content_scripts": [
+    {
+      "matches": [
+        "https://youtube/.com"
+      ],
+      "js": ["Assets/JS/playback.js"]
+    }
+  ],
   "browser_action": {
     "default_icon": "youtube_logo.png",
     "default_popup": "popup.html",
