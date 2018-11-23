@@ -4,7 +4,8 @@
   "name": "YouTube Better",
   "icons": {"128": "youtube_logo.png"},
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "tabs"
   ],
   "content_scripts": [
     {
