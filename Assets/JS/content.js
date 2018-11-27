@@ -6,6 +6,8 @@ function init(){
   chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     console.log(message.text);
 
-
+    if(message.text == "play"){
+      document.getElementsByClassName('ytp-play-button')[0].click();
+    }
   });
 }
