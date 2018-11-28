@@ -3,8 +3,7 @@ init();
 function init()
 {
   let play = document.querySelector("#play");
-  let forward = document.querySelector("#forward");
-  let backward = document.querySelector("#backword");
+  let speed = document.querySelector("#speed_confirm");
 
   play.addEventListener("click", () => {
     let msg = {
@@ -14,5 +13,18 @@ function init()
     chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
       chrome.tabs.sendMessage(tabs[0].id, msg);
     });
+  });
+
+  speed.addEventListener("click", () => {
+    let speed_value = document.querySelector("#speed").value;
+
+    let msg = {
+      text: "speed",
+      speed: speed_value
+    }
+
+    chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+      chrome.tabs.sendMessage(tabs[0].id, msg);
+    } );
   });
 }

@@ -8,6 +8,10 @@ function init(){
 
     if(message.text == "play"){
       document.getElementsByClassName('ytp-play-button')[0].click();
+    }else if(message.text == "speed"){
+      let speed = document.getElementsByClassName('html5-main-video')[0];
+
+      speed. playbackRate = message.speed;
     }
   });
 }
