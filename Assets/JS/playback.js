@@ -4,6 +4,8 @@ function init()
 {
   let play = document.querySelector("#play");
   let speed = document.querySelector("#speed_confirm");
+  let search_bar = document.querySelector("#search");
+  let mic = document.querySelector("microphone");
 
   play.addEventListener("click", () => {
     let msg = {
@@ -25,6 +27,10 @@ function init()
 
     chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
       chrome.tabs.sendMessage(tabs[0].id, msg);
-    } );
+    });
+  });
+
+  mic.addEventListener("click", () => {
+      let mic_input = document.querySelector("mic_input");
   });
 }
