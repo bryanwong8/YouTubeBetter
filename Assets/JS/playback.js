@@ -32,5 +32,9 @@ function init()
 
   mic.addEventListener("click", () => {
       let mic_input = document.querySelector("mic_input");
+
+      let msg = {
+        text: "mic"
+      }
   });
 }
